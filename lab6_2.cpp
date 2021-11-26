@@ -2,29 +2,31 @@
 #include <cmath>
 using namespace std;
 
-double deg2rad(double deg){
-    double radiant=deg*M_PI/180;
-    return radiant;
+double deg2rad(double a1){
+    double rad=a1*M_PI/180;
+    return rad;
 } 
-double rad2deg(double rad){
-    double degree=rad*180/M_PI;
-    return degree;
+double rad2deg(double a2){
+    double deg=a2*180/M_PI;
+    return deg;
 }
-double findXComponent(double lex1, double lex2, double radx1, double radx2){
-    double compx=lex1*cos(radx1)+lex2*cos(radx2);
-    return compx;
+double findXComponent(double l1, double l2, double a1, double a2){
+    double xcomp=l1*cos(a1)+l2*cos(a2);
+    return xcomp;
 }
-double findYComponent(double ley1, double ley2, double rady1, double rady2){
-    double compy=ley1*sin(rady1)+ley2*sin(rady2);
-    return compy;
+double findYComponent(double l1, double l2, double a1, double a2){
+    double ycomp=l1*sin(a1)+l2*sin(a2);
+    return ycomp;
 }
 double pythagoras(double Xcomp, double Ycomp){
-    double veclenght=sqrt(pow(Xcomp,2)+pow(Ycomp,2));
-    return veclenght;
+    double result_vec_length=sqrt(pow(Xcomp,2)+pow(Ycomp,2));
+    return result_vec_length;
 }
-void showResult(double veclenght, double degree){
-    cout<<"Lenght of th resultant vector = "<<veclenght<<endl;
-    cout<<"Direction of the resultant vector = "<<degree;
+void showResult(double result_vec_length, double result_vec_direction){
+    cout<<"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"<<endl;
+    cout<<"Length of the resultant vector = "<<result_vec_length<<endl;
+    cout<<"Direction of the resultant vector = "<<result_vec_direction<<endl;
+    cout<<"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%";
 }
 
 int main(){
